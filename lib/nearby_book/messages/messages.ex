@@ -39,7 +39,7 @@ defmodule NearbyBook.Messages do
     |> Messages.search_message(keywords)
     |> where(receiver_id: ^user_id)
     |> order_by(desc: :inserted_at)
-    |> Repo.paginate(page: page, page_size: 1)
+    |> Repo.paginate(page: page)
   end
 
   @doc """

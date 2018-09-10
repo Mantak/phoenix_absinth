@@ -42,9 +42,6 @@ Ready to run in production? Please [check our deployment guides](http://www.phoe
 ## 配置 /lib/nearby_book_web/channels/user_socket.ex， 更改内容如下：
 ```
   use Absinthe.Phoenix.Socket, schema: NearbyBookWeb.Schema
-  def connect(_params, socket) do
-    {:ok, assign(socket, :absinthe, %{schema: NearbyBookWeb.Schema})}
-  end
 ```
 ## 配置 /lib/nearby_book/application.ex， 挂载pubsub
 ```
